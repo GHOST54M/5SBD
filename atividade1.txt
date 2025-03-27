@@ -24,11 +24,11 @@ curso(curso_id)
 );
 
 Questões:
-1 - SELECT * FROM aluno
-2 - SELECT * FROM curso WHERE carga_horaria > 40
-3 -
-4 -
-5 -
+1 - SELECT * FROM aluno;
+2 - SELECT * FROM curso WHERE carga_horaria > 40;
+3 - SELECT * FROM matricula WHERE nota IS NULL;
+4 - SELECT * FROM matricula WHERE data_matricula > TO_DATE('2024-01-01','YYYY-MM-DD');
+5 - SELECT * FROM curso WHERE carga_horaria BETWEEN 30 AND 60;
 6 -
 7 -
 8 - 
