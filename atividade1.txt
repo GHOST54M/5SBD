@@ -1,0 +1,46 @@
+Resposta da atividade 1 do dia 27/03/2025
+
+Código do banco de dados:
+CREATE TABLE aluno (
+aluno_id INTEGER PRIMARY KEY,
+nome VARCHAR2(50),
+email VARCHAR2(100)
+);
+CREATE TABLE curso (
+curso_id INTEGER PRIMARY KEY,
+titulo VARCHAR2(100),
+carga_horaria INTEGER
+);
+CREATE TABLE matricula (
+aluno_id INTEGER,
+curso_id INTEGER,
+data_matricula DATE,
+nota NUMBER(5,2),
+CONSTRAINT pk_matricula PRIMARY KEY (aluno_id, curso_id),
+CONSTRAINT fk_aluno FOREIGN KEY (aluno_id) REFERENCES
+aluno(aluno_id),
+CONSTRAINT fk_curso FOREIGN KEY (curso_id) REFERENCES
+curso(curso_id)
+);
+
+Questões:
+1 - 
+2 -
+3 -
+4 -
+5 -
+6 -
+7 -
+8 - 
+9 -
+10 -
+11 -
+12 -
+13 -
+14 -
+15 -
+16 -
+17 -
+18 -
+19 -
+20 -
