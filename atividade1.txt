@@ -66,6 +66,12 @@ Questões:
 
 18 - SELECT c.titulo AS curso_titulo, COUNT(m.aluno_id) AS total_matriculas FROM curso c LEFT JOIN matricula m ON c.curso_id = m.curso_id GROUP BY c.curso_id, c.titulo;
 
-19 -
+19 - SELECT DISTINCT a.aluno_id, a.nome, a.email FROM aluno a JOIN matricula m ON a.aluno_id = m.aluno_id WHERE m.nota >= 8.0;
 
-20 -
+20 - SELECT c.titulo AS curso_titulo,  
+       AVG(m.nota) AS media_nota,  
+       MAX(m.nota) AS maior_nota,  
+       MIN(m.nota) AS menor_nota  
+FROM curso c  
+JOIN matricula m ON c.curso_id = m.curso_id  
+GROUP BY c.curso_id, c.titulo;
