@@ -44,8 +44,11 @@ Questões:
            ORDER BY m.data_matricula DESC;
 
 8 - SELECT a.nome AS Nome_Aluno, m.nota AS Nota FROM matricula m JOIN aluno a ON m.aluno_id = a.aluno_id;
-9 -
-10 -
+
+9 - SELECT c.curso_id, c.titulo, c.carga_horaria FROM curso c JOIN matricula m ON c.curso_id = m.curso_id WHERE m.aluno_id = 1;
+
+10 - SELECT m.curso_id, c.titulo, COUNT(m.aluno_id) AS num_alunos FROM matricula m JOIN curso c ON m.curso_id = c.curso_id GROUP BY m.curso_id, c.titulo
+           HAVING COUNT(m.aluno_id) > 1;
 11 -
 12 -
 13 -
