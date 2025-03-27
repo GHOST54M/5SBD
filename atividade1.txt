@@ -25,13 +25,25 @@ curso(curso_id)
 
 Questões:
 1 - SELECT * FROM aluno;
+
 2 - SELECT * FROM curso WHERE carga_horaria > 40;
+
 3 - SELECT * FROM matricula WHERE nota IS NULL;
+
 4 - SELECT * FROM matricula WHERE data_matricula > TO_DATE('2024-01-01','YYYY-MM-DD');
+
 5 - SELECT * FROM curso WHERE carga_horaria BETWEEN 30 AND 60;
-6 -
-7 -
-8 - 
+
+6 - SELECT * FROM aluno WHERE email LIKE '_%@gmail.com';
+
+7 - SELECT a.nome AS Nome_Aluno, 
+           c.titulo AS Curso, 
+           m.data_matricula AS Data_Matricula 
+           FROM matricula m JOIN aluno a ON m.aluno_id = a.aluno_id
+           JOIN curso c ON m.curso_id = c.curso_id
+           ORDER BY m.data_matricula DESC;
+
+8 - SELECT a.nome AS Nome_Aluno, m.nota AS Nota FROM matricula m JOIN aluno a ON m.aluno_id = a.aluno_id;
 9 -
 10 -
 11 -
