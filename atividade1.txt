@@ -54,17 +54,17 @@ Questões:
 
 12 - SELECT c.curso_id, c.titulo, c.carga_horaria FROM curso c LEFT JOIN matricula m ON c.curso_id = m.curso_id WHERE m.curso_id IS NULL;
 
-13 - 
+13 - SELECT a.nome AS aluno_nome, c.titulo AS curso_titulo FROM aluno a JOIN matricula m ON a.aluno_id = m.aluno_id JOIN curso c ON m.curso_id = c.curso_id;
 
-14 -
+14 - SELECT a.nome AS aluno_nome, AVG(m.nota) AS nota_media FROM aluno a JOIN matricula m ON a.aluno_id = m.aluno_id GROUP BY a.aluno_id, a.nome;
 
-15 -
+15 - SELECT c.titulo AS curso_titulo, AVG(m.nota) AS nota_media FROM curso c JOIN matricula m ON c.curso_id = m.curso_id GROUP BY c.curso_id, c.titulo;
 
-16 -
+16 - SELECT MAX(nota) AS maior_nota FROM matricula;
 
-17 -
+17 - SELECT a.nome AS aluno_nome, m.nota FROM aluno a JOIN matricula m ON a.aluno_id = m.aluno_id WHERE m.nota = (SELECT MIN(nota) FROM matricula);
 
-18 -
+18 - SELECT c.titulo AS curso_titulo, COUNT(m.aluno_id) AS total_matriculas FROM curso c LEFT JOIN matricula m ON c.curso_id = m.curso_id GROUP BY c.curso_id, c.titulo;
 
 19 -
 
