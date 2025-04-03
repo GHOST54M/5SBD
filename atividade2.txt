@@ -11,8 +11,8 @@ PARTE 2
 8 - SELECT cliente_nome ||' mora em '|| cidade AS frase FROM cliente;
 
 PARTE 3
-9 - 
-10 -
-11 - 
-12 - 
-13 - 
+9 - SELECT * FROM conta WHERE saldo > 9000 ORDER BY saldo DESC;
+10 - SELECT * FROM cliente WHERE cliente_nome LIKE '%Silva' OR cidade IN ('Nova Iguaçu');
+11 - SELECT conta_numero, ROUND(saldo) FROM conta;
+12 - SELECT UPPER(cliente_nome) FROM cliente;
+13 - SELECT cliente_nome, cidade FROM cliente WHERE cidade NOT IN('Teresópolis', 'Campos dos Goytacazes');
