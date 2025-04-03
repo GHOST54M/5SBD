@@ -1,14 +1,14 @@
 PARTE 1
-1 - 
-2 - 
-3 - 
+1 - SELECT * FROM cliente;
+2 - SELECT cliente_nome, cidade FROM cliente;
+3 - SELECT saldo, cliente_cliente_cod FROM conta;
 
 PARTE 2
-4 - 
-5 - 
-6 - 
-7 - 
-8 - 
+4 - SELECT cliente_nome FROM cliente WHERE cidade = 'Macaé';
+5 - SELECT cliente_nome, cliente_cod FROM cliente WHERE cliente_cod BETWEEN 5 AND 15;;
+6 - SELECT * FROM cliente WHERE cidade IN('Niterói', 'Volta Redonda', 'Itaboraí');
+7 - SELECT cliente_nome FROM cliente WHERE cliente_nome LIKE 'F%';
+8 - SELECT cliente_nome ||' mora em '|| cidade AS frase FROM cliente;
 
 PARTE 3
 9 - 
