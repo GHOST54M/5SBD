@@ -1,0 +1,18 @@
+1 - SELECT UPPER(cliente_nome) FROM cliente;
+2 - SELECT INITCAP(cliente_nome) FROM cliente;
+3 - SELECT SUBSTR(cliente_nome,1,3) FROM cliente;
+4 - SELECT LENGTH(cliente_nome) FROM cliente;
+5 - SELECT ROUND(saldo) FROM conta;
+6 - SELECT TRUNC(saldo) FROM conta;
+7 - SELECT MOD(saldo, 1000) FROM conta;
+8 - SELECT SYSDATE FROM dual;
+9 - SELECT SYSDATE + 30 AS data_vencimento_simulada FROM dual;
+10 - SELECT data_abertura, SYSDATE, SYSDATE - data_bertura FROM conta;
+11 - SELECT TO_CHAR(saldo,'L999G999G999D00') FROM conta;
+12 - SELECT TO_CHAR(data_abertura, 'DD/MM/YYYY') FROM conta;
+13 -
+14 -
+15 -
+16 -
+17 -
+18 -
